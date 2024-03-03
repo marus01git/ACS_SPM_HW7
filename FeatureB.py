@@ -34,10 +34,34 @@ def input_team_member_details():
 
     return team_members
 
+def calculate_effort_hours(team_members, sprint_days):
+    """
+    Calculates the total available effort-hours for the team and per person.
+    Args:
+        team_members: List of dictionaries with each team member's details.
+        sprint_days: Integer representing the number of days in the sprint.
+    Returns:
+        A tuple containing total team effort-hours and a dictionary of individual effort-hours.
+    """
+    total_team_effort_hours = 0
+    individual_effort_hours = {}
+
+    for member in team_members:
+        available_hours = (sprint_days * member["daily_hours"]) - member["pto_hours"] - member["ceremony_hours"]
+        individual_effort_hours[member["name"]] = available_hours
+        total_team_effort_hours += available_hours
+
+    return total_team_effort_hours, individual_effort_hours
+
+
 def main():
     sprint_days = int(input("Enter the number of sprint days: "))
     team_members = input_team_member_details()
+    total_team_effort_hours, individual_effort_hours = calculate_effort_hours(team_members, sprint_days)
 
- 
+    print(f"\nTotal Team Effort-Hours: {total_team_effort_hours}")
+    for name, hours in individual_effort_hours.items():
+        print(f"{name}: {hours} available effort-hours")
+
 if __name__ == "__main__":
     main()
