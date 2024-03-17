@@ -1,0 +1,10 @@
+Acceptance Test for Feature B:
+1. Initialize the application for team effort-hour calculation.
+2. Simulate user input for the number of sprint days as "10".
+3. Invoke the method to input team member details, simulating user input for two members: 
+   Alice (PTO hours: 8, Ceremony hours: 2, Daily hours: 8) and 
+   Bob (PTO hours: 0, Ceremony hours: 2, Daily hours: 8), followed by "done".
+4. Call the calculate_effort_hours method using the inputted team member details and sprint days.
+5. Verify that the method correctly calculates the total and individual effort-hours, expecting the total to be 144, with Alice having 70 available effort-hours and Bob having 74.
+6. Confirm that the application outputs the calculated effort-hours correctly to the user.
+7. The test passes if the output matches the expected values, covering the path of multiple methods being executed and interacted with.

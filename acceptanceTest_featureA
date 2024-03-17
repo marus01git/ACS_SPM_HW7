@@ -1,0 +1,8 @@
+
+Acceptance Test for Feature A:
+1. Initialize the application for sprint velocity calculation.
+2. Invoke the method to input sprint points, simulating user input of "10", "15", "20", followed by "done" to signal completion.
+3. Call the calculate_average_velocity method using the inputted sprint points.
+4. Verify that the method correctly calculates and returns the average sprint velocity as 15.
+5. Confirm that the application outputs "Average Sprint Velocity: 15" to the user.
+6. The test passes if the output is as expected, covering the path of multiple methods being executed and interacted with.
