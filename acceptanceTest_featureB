@@ -11,6 +11,6 @@ Acceptance Test for Feature B:
 5. The main method calls calculate_effort_hours with the collected team member details and sprint days.
 6. The calculate_effort_hours method calculates the total and individual effort-hours and returns them.
 7. The main method receives the effort-hour calculations and displays them to the user.
-   - Verify the displayed total team effort-hours is "144".
-   - Verify Alice has "70" available effort-hours and Bob has "74".
+   - Verify the displayed total team effort-hours is "148".
+   - Verify Alice has "70" available effort-hours and Bob has "78".
 8. The test passes if all methods are executed in sequence and the final outputs are correct.
